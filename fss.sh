@@ -252,7 +252,7 @@ setup_user() {
     local target_user="$DEFAULT_USERNAME"
 
     if [ "$FOR_REAL" -ne 1 ]; then
-        target_user=$(input_gum "请输入要创建的用户名" "" "$DEFAULT_USERNAME")
+        target_user=$(input_gum "请输入要创建的用户名" "$DEFAULT_USERNAME" "")
     fi
 
     # 创建用户
