@@ -26,7 +26,7 @@ bash fss.sh --for-real --hostname node1.example.com hostname
 Удалённый запуск (без клонирования):
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/Bryant-Xue/FastSetupScript/main/fss.sh)" -- --for-real all
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/chudnyi/FastSetupScript/main/fss.sh)" -- --help
 ```
 
 ## Команды
@@ -41,13 +41,15 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Bryant-Xue/FastSetupScri
 | `all`             | Выполнить все шаги по порядку (полная настройка)               |
 | `help`            | Показать справку                                               |
 
-## Глобальные флаги (ставятся ПЕРЕД командой)
+## Глобальные флаги
+
+Можно указывать в любой позиции. Флаг `--help` (или `-h`) имеет приоритет над остальными аргументами.
 
 - `--for-real` — скоростной режим без интерактивных запросов
 - `--without-gum` — не использовать gum
 - `--with-dns` — включить шаг синхронизации DNS
 - `--hostname ИМЯ` — задать имя хоста по умолчанию
-- `-h`, `--help` — показать справку
+- `-h`, `--help` — показать справку и выйти
 
 ## Переменные окружения
 
